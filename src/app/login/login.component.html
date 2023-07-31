@@ -1,0 +1,10 @@
+<h2>Welcome</h2>
+<div class="drop">
+    <div ngbDropdown>
+        <button type="button" ngbDropdownToggle class="btn btn-outline-primary" id="dropUser"> Select Rol</button>
+        <div ngbDropdownMenu>
+            <button ngbDropdownItem (click)="login('admin')">Admin</button>
+            <button ngbDropdownItem (click)="login('user')">User</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div>
+  <button type="button" class="btn btn-outline-primary" (click)="openModal()">Create</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th *ngIf="rol === 'admin'">Maiden Name</th>
+        <th *ngIf="rol === 'admin'">age</th>
+        <th *ngIf="rol === 'admin'">gender</th>
+        <th *ngIf="rol === 'admin'">email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersList" [ngStyle]="{'--bs-table-bg' : returnColor(user)}">
+        <th>
+          {{user.id}}
+        </th>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td *ngIf="rol === 'admin'">{{user.maidenName}}</td>
+        <td *ngIf="rol === 'admin'">{{user.age}}</td>
+        <td *ngIf="rol === 'admin'">{{user.gender}}</td>
+        <td *ngIf="rol === 'admin'">{{user.email}}</td>
+        <td><button type="button" class="btn btn-outline-primary" (click)="openModal(user)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

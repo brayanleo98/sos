@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="formGroup">
+            <div class="mb-2">
+                <label for="firstName">first Name</label>
+                <input type="text" name="firstName" formControlName="firstName" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" formControlName="lastName" class="form-control">
+            </div>
+            <div class="mb-2" >
+                <label for="maidenName">Maiden Name</label>
+                <input type="text" name="maidenName" formControlName="maidenName" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label for="age">Age</label>
+                <input type="text" name="age" formControlName="age" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label for="gender">Gender</label>
+                <input type="text" name="gender" formControlName="gender" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label for="email">Email</label>
+                <input type="text" name="email" formControlName="email" class="form-control">
+            </div>
+        </form>
+        <button type="button" class="btn btn-outline-primary" (click)="saveUser()">Save</button>
+    </div>
+
+</div>
